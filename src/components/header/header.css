@@ -1,0 +1,119 @@
+.nav {
+    height: 80px;
+    background: var(--nav-bg);
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+.nav_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_logo{
+    font-size: 1.5rem;
+    font-family: var(--secondary-font-family);
+}
+.nav_menu{
+    display: flex; 
+    list-style: none;
+    align-items: center;
+    background-color: var(--nav-bg);
+}
+.nav_menu-items a{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    color: var(--special-text);
+    text-decoration: none !important;
+    transition: all 0.5s ease-in;
+}
+.nav_menu-items a::before{
+    content:'';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.5s ease-in;
+    width: 100%;
+}
+.nav_menu-items a:hover{
+    color: var(--special-text);
+}
+.nav_menu-items a:hover::before{
+    content: '';
+    background-color: var(--special-text);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switch{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 20px;
+    top: 5px;
+}
+.hamburger-menu{
+    display: none;
+    cursor: pointer;
+    padding: 10px 50px 10px 0;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    background-color:var(--special-text);
+    margin: 5px 0;
+    transition: 0.5s;
+}
+@media(max-width:991px) {
+    .nav_wrapper {
+        padding: 0 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .hamburger-menu{
+    display: block;
+}
+.bar.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.bar.open:nth-child(2) {
+    opacity: 0;
+}
+.bar.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.nav_wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+.nav_menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.nav_menu-items{
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.mobile-menu{
+    display: flex;
+}
+}
