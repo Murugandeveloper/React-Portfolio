@@ -18,7 +18,7 @@ const Card = ({icon,title,features}) => {
     </div>
   )
 }
-Card.propTypes={
+Card.proptypes={
     icon:PropTypes.element,
     title:PropTypes.string.isRequired,
     features:PropTypes.arrayOf(PropTypes.string),
