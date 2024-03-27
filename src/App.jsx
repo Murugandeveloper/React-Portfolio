@@ -7,7 +7,7 @@ function App() {
   <div className='app'>
     <ThemeProvider>
     <Header/>
-    <Router>
+    <Router basename="/React-Portfolio">
       <Routes>
         <Route path='/' element={<Home/>}/>
       </Routes>
